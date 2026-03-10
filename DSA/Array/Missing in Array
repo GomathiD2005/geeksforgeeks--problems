@@ -1,1 +1,12 @@
+class Solution {
+    long missingNum(int arr[]) {
+        long n = arr.length + 1; 
+        long expectedSum = n * (n + 1) / 2;
 
+        long actualSum = 0;
+        for (long num : arr) actualSum += num;
+
+        return expectedSum - actualSum;
+    }
+}
+    
